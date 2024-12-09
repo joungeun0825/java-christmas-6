@@ -1,9 +1,9 @@
 package christmas.domain;
 
-public class DayEvent {
+public class WeekendEvent {
     private int discount;
 
-    public DayEvent(Date date, Order order) {
+    public WeekendEvent(Date date, Order order) {
         this.discount = calcDiscount(date, order);
     }
 
@@ -16,12 +16,11 @@ public class DayEvent {
     }
 
     private int applyDiscount(int date, String menu){
-        if (date % 7 != 1 && date % 7 != 2) {
-            if (Menu.valueOf(menu).getType().equals("디저트")) {
+        if (date % 7 == 1 || date % 7 == 2) {
+            if (Menu.valueOf(menu).getType().equals("메인")) {
                 return 2023;
             }
         }
         return 0;
     }
-
 }
