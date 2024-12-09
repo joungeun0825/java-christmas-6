@@ -5,8 +5,12 @@ public class Date {
 
     private int date;
 
-    public Date(int date){
+    public Date(int date) {
         this.date = date;
+    }
+
+    public int getDate() {
+        return this.date;
     }
 
     @Override
