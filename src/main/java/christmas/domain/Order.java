@@ -22,8 +22,12 @@ public class Order {
         return totalPrice;
     }
 
-    public TotalPrice getTotalPrice(){
+    public TotalPrice getTotalPrice() {
         return this.totalPrice;
+    }
+
+    public Map<String, Integer> getOrders() {
+        return this.orders;
     }
 
     @Override

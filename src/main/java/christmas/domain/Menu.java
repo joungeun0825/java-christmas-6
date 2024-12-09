@@ -14,8 +14,12 @@ public enum Menu {
         this.price = price;
     }
 
-    public int getPrice(){
+    public int getPrice() {
         return price;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public static void isValidMenu(String itemName) {
@@ -26,7 +30,7 @@ public enum Menu {
                 break;
             }
         }
-        if(!isValid){
+        if (!isValid) {
             throw new IllegalArgumentException();
         }
     }
