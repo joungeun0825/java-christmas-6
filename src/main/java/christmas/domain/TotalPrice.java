@@ -10,10 +10,14 @@ public class TotalPrice {
         this.totalPrice = totalPrice;
     }
 
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder().append(TOTAL_PRICE).append("\n");
-        sb.append(String.format(PRICE_FORMAT,totalPrice));
+        sb.append(String.format(PRICE_FORMAT, totalPrice));
         return sb.toString();
     }
 }
