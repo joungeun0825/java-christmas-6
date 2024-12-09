@@ -1,9 +1,9 @@
 package christmas.view;
 
 import camp.nextstep.edu.missionutils.Console;
+import christmas.domain.Menu;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -47,9 +47,10 @@ public class InputView {
                 .stream()
                 .map(String::trim)
                 .map(item -> item.split("-"))
+                .peek(item -> Menu.isValidMenu(item[0]))
                 .collect(Collectors.toMap(
                         item -> item[0],
-                        item -> Integer.parseInt(item[1]))
+                        item -> parseInt(item[1]))
                 );
     }
 
