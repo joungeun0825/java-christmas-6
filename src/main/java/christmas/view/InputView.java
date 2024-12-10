@@ -29,7 +29,7 @@ public class InputView {
         System.out.println(INPUT_MENU_MESSAGE);
         try {
             return processMenu(Console.readLine().trim());
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             OutputView.printErrorMessage(ERROR_MENU_MESSAGE);
             return inputMenu();
         }

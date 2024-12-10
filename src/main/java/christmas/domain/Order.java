@@ -3,7 +3,7 @@ package christmas.domain;
 import java.util.Map;
 
 public class Order {
-    private static final String MENU = "<주문 메뉴>";
+    private static final String MENU = "\n<주문 메뉴>";
     private static final String ORDER_FORMAT = "%s %d개\n";
 
     private Map<String, Integer> orders;
